@@ -3,7 +3,6 @@ import axios from "axios";
 import ProductCart from "../components/ProductCart";
 import Filterproduct from "../components/filter/Filterproduct";
 
-
 const ProductsList = () => {
   const [page, setPage] = useState(1);
 
@@ -115,14 +114,17 @@ const ProductsList = () => {
     return filteredProducts?.map((item, i) => {
       if (products.length === i + 1) {
         return (
-          <div className='col-lg-3 mb-4' ref={lastProduct} key={Math.random()}>
+          <div
+            className='col-lg-3 mb-4 '
+            ref={lastProduct}
+            key={Math.random()}>
             <ProductCart item={item} />
           </div>
         );
       } else {
         return (
           <div className='col-lg-3 mb-4' key={Math.random()}>
-            <ProductCart item={item} />;
+            <ProductCart item={item} />
           </div>
         );
       }
