@@ -114,10 +114,7 @@ const ProductsList = () => {
     return filteredProducts?.map((item, i) => {
       if (products.length === i + 1) {
         return (
-          <div
-            className='col-lg-3 mb-4 '
-            ref={lastProduct}
-            key={Math.random()}>
+          <div className='col-lg-3 mb-4 ' ref={lastProduct} key={Math.random()}>
             <ProductCart item={item} />
           </div>
         );
@@ -135,21 +132,20 @@ const ProductsList = () => {
 
   return (
     <div className='container'>
-      <div className='navbarContainer d-flex justify-content-between px-3 mb-5 sticky-top bg-light'>
-        <h1 className='title mt-3 mx-3 text-success'>Products</h1>
-        <div className='d-flex align-items-center'>
+      <div className='navbar navbar-light bg-light justify-content-around px-3 mb-5 sticky-top bg-light mx-3'>
+        <h1 className='navbar-brand mt-3 mx-3 text-success fs-2'>Products</h1>
+        <form className='form-inline d-flex align-items-center'>
           <Filterproduct
             category={category}
             priceSort={priceSort}
             handleChangeCategory={handleChangeCategory}
             handleChangePriceSort={handleChangePriceSort}
           />
-          <button className='mx-3 btn btn-md btn-danger' onClick={handleResetFilter}>
+          <button className='btn btn-md btn-danger' onClick={handleResetFilter}>
             reset
           </button>
-        </div>
+        </form>
       </div>
-
       <div id='gallery'>
         <div className='container '>
           <div className='row'>{result}</div>

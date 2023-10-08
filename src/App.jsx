@@ -1,8 +1,9 @@
 import ProductsList from "./pages/ProductsList";
+import "./App.css";
 
 const App = () => {
   return (
-    <div className='bg-.bg-secondary'>
+    <div>
       <ProductsList />
     </div>
   );
