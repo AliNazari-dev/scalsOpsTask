@@ -4,7 +4,6 @@ const Filterproduct = ({ ...props }) => {
   const { handleChangeCategory, handleChangePriceSort, priceSort, category } = props;
   return (
     <div className='filterContainer d-flex my-3'>
-   
       <div className='filter'>
         <span className='fs-5 fw-normal ms-3'>
           <select

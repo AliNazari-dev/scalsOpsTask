@@ -1,7 +1,8 @@
 import { useState, useRef, useCallback, useMemo, useEffect } from "react";
 import axios from "axios";
 import ProductCart from "../components/ProductCart";
-import Filterproduct from "../components/filterproduct";
+import Filterproduct from "../components/filter/Filterproduct";
+
 
 const ProductsList = () => {
   const [page, setPage] = useState(1);
